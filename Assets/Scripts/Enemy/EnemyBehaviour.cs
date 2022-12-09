@@ -9,11 +9,18 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField] private PathCreator pathCreator;
     float distanceTravelled = 0f;
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         distanceTravelled += speed * Time.fixedDeltaTime;
         transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled);
-        // transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled);
+    }
+
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.gameObject.tag == "Base")
+        {
+            // Trigger game over screen here
+            Debug.Log("Zadeli hatu");
+        }
     }
 }
