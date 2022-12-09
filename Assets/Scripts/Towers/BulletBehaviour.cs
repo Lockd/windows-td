@@ -12,6 +12,8 @@ public class BulletBehaviour : MonoBehaviour
     public float speed = 0f;
     public Sprite sprite;
     public float size = .2f;
+    public float enemySpeedReduction = 0f;
+    public float slowDuration = 0f;
 
     void Start()
     {
@@ -33,6 +35,8 @@ public class BulletBehaviour : MonoBehaviour
         if (collider.gameObject.tag == "Enemy")
         {
             EnemyBehaviour enemyBehaviour = collider.gameObject.GetComponent<EnemyBehaviour>();
+            bool isStun = enemySpeedReduction == 1f;
+            enemyBehaviour.onApplySlow(enemySpeedReduction, slowDuration, isStun);
             enemyBehaviour.onGetDamage(damage);
             Destroy(gameObject);
         }

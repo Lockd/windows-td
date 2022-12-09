@@ -2,21 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExplorerBehaviour : MonoBehaviour
+public class TowerBehaviour : MonoBehaviour
 {
     [SerializeField] private float radius = 8f;
     [SerializeField] private float shotCooldown = .2f;
     [SerializeField] private float projectileSpeed = 10f;
     [SerializeField] private int damage = 1;
     [SerializeField] private GameObject projectile;
-    [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private float bulletSize = .2f;
+    [Range(0, 1)][SerializeField] private float enemySpeedReduction = 0f;
+    [Range(0, 1)][SerializeField] private float slowChance = 0f;
+    [SerializeField] private float slowDuration = 0f;
+    SpriteRenderer spriteRenderer;
     CircleCollider2D _collider;
     List<GameObject> targets = new List<GameObject>();
     float canShootAfter = 0f;
 
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
         _collider = GetComponent<CircleCollider2D>();
         _collider.radius = radius;
     }
@@ -52,6 +56,11 @@ public class ExplorerBehaviour : MonoBehaviour
         bulletBehaviour.damage = damage;
         bulletBehaviour.sprite = spriteRenderer.sprite;
         bulletBehaviour.size = bulletSize;
+        if (enemySpeedReduction > 0 && Random.Range(0.01f, 1f) < slowChance)
+        {
+            bulletBehaviour.enemySpeedReduction = enemySpeedReduction;
+            bulletBehaviour.slowDuration = slowDuration;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collider)
