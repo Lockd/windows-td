@@ -6,7 +6,8 @@ using PathCreation;
 public class EnemyBehaviour : MonoBehaviour
 {
     [SerializeField] private float speed = 0.2f;
-    [SerializeField] private PathCreator pathCreator;
+    public PathCreator pathCreator;
+    [SerializeField] private int currentHelath = 20;
     float distanceTravelled = 0f;
 
     void FixedUpdate()
@@ -15,12 +16,21 @@ public class EnemyBehaviour : MonoBehaviour
         transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled);
     }
 
+    public void onGetDamage(int amount)
+    {
+        currentHelath -= amount;
+        if (currentHelath <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.tag == "Base")
         {
-            // Trigger game over screen here
-            Debug.Log("Zadeli hatu");
+            Destroy(gameObject);
+            // TODO Trigger game over screen here
         }
     }
 }
