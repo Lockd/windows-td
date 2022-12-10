@@ -7,6 +7,9 @@ TagManager:
   - Base
   - Enemy
   - Tower
+  - Window_exe
+  - Icon
+  - Boss
   layers:
   - Default
   - TransparentFX

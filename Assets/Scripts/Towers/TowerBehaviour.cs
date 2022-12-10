@@ -64,7 +64,7 @@ public class TowerBehaviour : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.gameObject.tag == "Enemy")
+        if (collider.gameObject.tag == "Enemy" || collider.gameObject.tag == "Boss")
         {
             addEnemy(collider.gameObject);
         }
@@ -72,7 +72,7 @@ public class TowerBehaviour : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collider)
     {
-        if (collider.gameObject.tag == "Enemy")
+        if (collider.gameObject.tag == "Enemy" || collider.gameObject.tag == "Boss")
         {
             changeTarget(collider.gameObject);
         }
