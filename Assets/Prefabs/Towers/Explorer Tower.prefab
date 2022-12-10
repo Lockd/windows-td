@@ -134,6 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d971e7112e2e8e49908b44901d840d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 4
   radius: 12
   shotCooldown: 0.5
   projectileSpeed: 8

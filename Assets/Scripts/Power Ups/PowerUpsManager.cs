@@ -2,16 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+class modifiers
+{
+    public int additionalDamage = 0;
+    public float shotCooldownReduction = 0f;
+    public float additionalFreezeTime = 0f;
+    public int additionalTagets = 0;
+    public float additionalRange = 0f;
+}
+
 public class PowerUpsManager : MonoBehaviour
 {
     [SerializeField] private List<PowerUpScriptableObject> allPowerUps;
     [SerializeField] private PowerUpWindowBehaviour powerUpWidnow;
     [SerializeField] private int amountOfPowerUpsToOffer = 3;
     List<PowerUpScriptableObject> nonSelectedPowerUps;
+    public static Hashtable test = new Hashtable();
 
     void Start()
     {
         offerPowerUp();
+        test.Add("Excel", new modifiers());
+        test.Add("PowerPoint", new modifiers());
+        test.Add("Word", new modifiers());
+        test.Add("Chrome", new modifiers());
+        test.Add("Explorer", new modifiers());
     }
 
     public void offerPowerUp()
@@ -23,7 +38,7 @@ public class PowerUpsManager : MonoBehaviour
 
     public void applyPowerUp(PowerUpScriptableObject powerUp)
     {
-        // TODO add this logic
+        // TODO VLADIK adjust this logic
         Debug.Log("should apply power up");
         Debug.Log(powerUp);
     }

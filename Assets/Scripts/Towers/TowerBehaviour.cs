@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TowerBehaviour : MonoBehaviour
 {
+    [SerializeField] private TowerTypes type;
     [SerializeField] private float radius = 8f;
     [SerializeField] private float shotCooldown = .2f;
     [SerializeField] private float projectileSpeed = 10f;
@@ -30,6 +31,12 @@ public class TowerBehaviour : MonoBehaviour
         {
             shoot();
         }
+
+        // TODO VLADIK REMOVE THIS SHITE
+        modifiers currentMods = (modifiers)PowerUpsManager.test[type];
+
+        Debug.Log("Additional damage from tower");
+        Debug.Log(currentMods.additionalDamage);
     }
 
     public void changeTarget(GameObject targetToRemove = null)
