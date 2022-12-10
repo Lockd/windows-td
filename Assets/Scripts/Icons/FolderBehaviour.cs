@@ -93,12 +93,6 @@ public class FolderBehaviour : MonoBehaviour
         isSelected = true;
     }
 
-    /*private void OnRightMouseClick()
-    {
-        Debug.Log(gameObject.name + " right clicked");
-        rend.color = new Color(0.2971698f, 0.741266f, 1f, 0.34f);
-    }*/
-
     public bool IsSelected
     {
         get

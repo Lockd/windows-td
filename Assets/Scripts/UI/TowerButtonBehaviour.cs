@@ -7,22 +7,17 @@ public class TowerButtonBehaviour : MonoBehaviour
 {
     public int towerIndex;
     public Button selectButton;
-    public GameObject window;
-    WindowBehaviour windowBeh;
+    public WindowBehaviour windowBeh;
+    [TextArea] public string descriptionText;
 
     void Start()
     {
         selectButton.onClick.AddListener(OnTowerSelect);
-        windowBeh = window.GetComponent<WindowBehaviour>();
     }
 
     void OnTowerSelect()
     {
-        foreach (GameObject obj in windowBeh.towerTexts)
-        {
-            obj.SetActive(false);
-        }
-        windowBeh.towerTexts[towerIndex].SetActive(true);
+        windowBeh.descriptionField.text = descriptionText;
         windowBeh.currentTower = towerIndex;
     }
 }
