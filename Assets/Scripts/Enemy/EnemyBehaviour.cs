@@ -44,8 +44,9 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if (collider.gameObject.tag == "Base")
         {
-            Destroy(gameObject);
+            Debug.Log("Enemy collided with the base");
             // TODO Trigger game over screen here
+            Destroy(gameObject);
         }
     }
 }

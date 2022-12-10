@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 public class FolderBehaviour : MonoBehaviour
 {
     float doubleClickTime = .5f, lastClickTime;
-    public SpriteRenderer rend;
+    SpriteRenderer spriteRenderer;
     public GameObject frame;
     bool isSelected;
     GameObject execWindow;
@@ -15,6 +15,7 @@ public class FolderBehaviour : MonoBehaviour
 
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
         // this assumes that we will only have one window behaviour
         execWindow = Resources.FindObjectsOfTypeAll<WindowBehaviour>()[0].gameObject;
     }
@@ -35,7 +36,7 @@ public class FolderBehaviour : MonoBehaviour
         }
         else if (Input.GetMouseButtonDown(0) && (!isHovering))
         {
-            rend.color = new Color(0.2971698f, 0.741266f, 1f, 0);
+            spriteRenderer.color = new Color(0.2971698f, 0.741266f, 1f, 0);
             frame.SetActive(false);
         }
     }
@@ -43,9 +44,9 @@ public class FolderBehaviour : MonoBehaviour
     private void OnMouseEnter()
     {
         if (!isSelected)
-            rend.color = new Color(0.2971698f, 0.741266f, 1f, 0.12f);
+            spriteRenderer.color = new Color(0.2971698f, 0.741266f, 1f, 0.12f);
         else
-            rend.color = new Color(0.2971698f, 0.741266f, 1f, 0.34f);
+            spriteRenderer.color = new Color(0.2971698f, 0.741266f, 1f, 0.34f);
         frame.SetActive(true);
     }
 
@@ -53,12 +54,12 @@ public class FolderBehaviour : MonoBehaviour
     {
         if (!isSelected)
         {
-            rend.color = new Color(0.2971698f, 0.741266f, 1f, 0);
+            spriteRenderer.color = new Color(0.2971698f, 0.741266f, 1f, 0);
             frame.SetActive(false);
         }
         else
         {
-            rend.color = new Color(0.2971698f, 0.741266f, 1f, 0.24f);
+            spriteRenderer.color = new Color(0.2971698f, 0.741266f, 1f, 0.24f);
         }
         isHovering = false;
     }
@@ -87,7 +88,7 @@ public class FolderBehaviour : MonoBehaviour
             }
             obj.GetComponent<SpriteRenderer>().color = new Color(0.2971698f, 0.741266f, 1f, 0);
         }
-        rend.color = new Color(0.2971698f, 0.741266f, 1f, 0.34f);
+        spriteRenderer.color = new Color(0.2971698f, 0.741266f, 1f, 0.34f);
         frame.SetActive(true);
         isSelected = true;
     }

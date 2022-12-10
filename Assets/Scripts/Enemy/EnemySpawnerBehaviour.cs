@@ -35,7 +35,6 @@ public class EnemySpawnerBehaviour : MonoBehaviour
 
     void spawnMonster()
     {
-        Debug.Log("Enemy index " + currentMonsterIdx);
         GameObject monster = Instantiate(
             currentWave.waveMonsterPrefab,
             transform.position,

@@ -13,14 +13,13 @@ public class TowerBehaviour : MonoBehaviour
     [Range(0, 1)][SerializeField] private float enemySpeedReduction = 0f;
     [Range(0, 1)][SerializeField] private float slowChance = 0f;
     [SerializeField] private float slowDuration = 0f;
-    SpriteRenderer spriteRenderer;
+    [SerializeField] private SpriteRenderer spriteRenderer;
     CircleCollider2D _collider;
     List<GameObject> targets = new List<GameObject>();
     float canShootAfter = 0f;
 
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
         _collider = GetComponent<CircleCollider2D>();
         _collider.radius = radius;
     }
