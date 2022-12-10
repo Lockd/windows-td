@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14d65eb826712db4fbf5897028bc4e33, type: 3}
+  m_Name: BossWave1
+  m_EditorClassIdentifier: 
+  delayBetweenMobs: 1
+  timeUntilNextWave: 20
+  waveMonsterPrefab: {fileID: 5070433618363119558, guid: 56b901df9d6d99d43afc80e7051c1cf7, type: 3}
+  amountOfEnemiesToSpawn: 1

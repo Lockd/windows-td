@@ -42,6 +42,11 @@ public class EnemySpawnerBehaviour : MonoBehaviour
         );
 
         EnemyBehaviour enemyBehaviour = monster.GetComponent<EnemyBehaviour>();
+        if (monster.tag != "Boss")
+        {
+            enemyBehaviour.CurrentHealth *= (currentWaveIdx + 1);
+            enemyBehaviour.Speed += 0.2f * (currentWaveIdx + 1);
+        }
         if (enemyBehaviour != null)
         {
             enemyBehaviour.pathCreator = pathCreator;

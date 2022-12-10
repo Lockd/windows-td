@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using PathCreation;
+using UnityEngine.UI;
 
 public class EnemyBehaviour : MonoBehaviour
 {
@@ -12,14 +13,33 @@ public class EnemyBehaviour : MonoBehaviour
     float restoreSpeedAfter = 0f;
     float speedModifier = 1f;
 
+    public Slider HPBar;
+
+    public string enemyID;
+
+    private void Start()
+    {
+        HPBar.minValue = 0;
+        HPBar.maxValue = currentHelath;
+        HPBar.value = HPBar.maxValue;
+    }
     void FixedUpdate()
     {
+        HPBar.value = currentHelath;
         if (Time.time > restoreSpeedAfter && speedModifier != 1f)
         {
             speedModifier = 1f;
         }
         distanceTravelled += (speed * speedModifier) * Time.fixedDeltaTime;
-        transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled);
+        if (enemyID != "macBoss")
+        {
+            transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled);
+        }
+        else
+        {
+            Transform target = GameObject.FindGameObjectWithTag("Base").transform;
+            transform.position = Vector3.MoveTowards(transform.position, target.position, (speed * speedModifier) * Time.fixedDeltaTime);
+        }
     }
 
     public void onGetDamage(int amount)
@@ -47,6 +67,31 @@ public class EnemyBehaviour : MonoBehaviour
             Debug.Log("Enemy collided with the base");
             // TODO Trigger game over screen here
             Destroy(gameObject);
+        }
+    }
+
+    public int CurrentHealth
+    {
+        get
+        {
+            return currentHelath;
+        }
+
+        set
+        {
+            currentHelath = value;
+        }
+    }
+    public float Speed
+    {
+        get
+        {
+            return speed;
+        }
+
+        set
+        {
+            speed = value;
         }
     }
 }

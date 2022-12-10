@@ -32,7 +32,7 @@ public class BulletBehaviour : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.gameObject.tag == "Enemy")
+        if (collider.gameObject.tag == "Enemy" || collider.gameObject.tag == "Boss")
         {
             EnemyBehaviour enemyBehaviour = collider.gameObject.GetComponent<EnemyBehaviour>();
             bool isStun = enemySpeedReduction == 1f;
