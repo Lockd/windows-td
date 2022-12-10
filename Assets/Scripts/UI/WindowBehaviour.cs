@@ -5,33 +5,25 @@ using UnityEngine.UI;
 
 public class WindowBehaviour : MonoBehaviour
 {
+    [SerializeField] private List<GameObject> towerPrefabs;
     public Button closeButton;
-
     public GameObject currentExe;
-
     public GameObject[] towerTexts;
-
     public Button buildButton;
-
     public int currentTower = -1;
 
-    public GameObject towerTemp;
-
-    public Sprite[] towerSprites;
-    // Start is called before the first frame update
     void Start()
     {
         closeButton.onClick.AddListener(CloseWindow);
         buildButton.onClick.AddListener(BuildTower);
     }
 
-    // Update is called once per frame
     void Update()
     {
         buildButton.gameObject.SetActive(currentTower >= 0);
         if (currentTower == -1)
         {
-            foreach(GameObject obj in towerTexts)
+            foreach (GameObject obj in towerTexts)
             {
                 obj.SetActive(false);
             }
@@ -40,7 +32,6 @@ public class WindowBehaviour : MonoBehaviour
 
     void CloseWindow()
     {
-        // Destroy(gameObject);
         currentTower = -1;
         currentExe = null;
         gameObject.SetActive(false);
@@ -48,8 +39,13 @@ public class WindowBehaviour : MonoBehaviour
 
     void BuildTower()
     {
+        // getting parent transform since we are insterested in position of container
+        Instantiate(
+            towerPrefabs[currentTower],
+            currentExe.transform.position,
+            currentExe.transform.rotation
+        );
+        Destroy(currentExe);
         CloseWindow();
-        Instantiate(towerTemp, transform.position, transform.rotation);
-        towerTemp.GetComponent<SpriteRenderer>().sprite = towerSprites[currentTower];
     }
 }

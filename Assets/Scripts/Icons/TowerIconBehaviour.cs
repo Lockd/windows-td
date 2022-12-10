@@ -4,23 +4,12 @@ using UnityEngine;
 
 public class TowerIconBehaviour : MonoBehaviour
 {
-
     public SpriteRenderer rend;
-
     public GameObject frame;
-
     bool isSelected;
-
     public bool isHovering;
-
     public GameObject menuTemp;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetMouseButtonDown(0) && (!isHovering))

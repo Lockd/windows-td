@@ -7,29 +7,21 @@ using UnityEngine.EventSystems;
 public class TowerMenuBehaviour : MonoBehaviour, IPointerEnterHandler
 {
     public Button deleteButton;
-
     public TowerIconBehaviour thisTowerIcon;
-
     public GameObject defaultExe;
     public GameObject thisTower;
-    // Start is called before the first frame update
+
     void Start()
     {
-        deleteButton.onClick.AddListener(DeleteTower);
+        // moved that logic to UI button on click event
+        // deleteButton.onClick.AddListener(DeleteTower);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void DeleteTower()
+    public void DeleteTower()
     {
         Debug.Log("Tower Deleted");
         Instantiate(defaultExe, thisTower.transform.position, transform.rotation);
         Destroy(thisTower);
-
     }
 
     public void OnPointerEnter(PointerEventData eventData)

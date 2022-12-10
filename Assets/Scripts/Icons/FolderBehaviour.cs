@@ -6,25 +6,19 @@ using UnityEngine.EventSystems;
 
 public class FolderBehaviour : MonoBehaviour
 {
-
     float doubleClickTime = .5f, lastClickTime;
-
     public SpriteRenderer rend;
-
     public GameObject frame;
-
     bool isSelected;
-
-    public GameObject execWindow;
-
+    GameObject execWindow;
     bool isHovering;
-    // Start is called before the first frame update
+
     void Start()
     {
-        
+        // this assumes that we will only have one window behaviour
+        execWindow = Resources.FindObjectsOfTypeAll<WindowBehaviour>()[0].gameObject;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetMouseButtonDown(0) && isHovering)
@@ -34,11 +28,12 @@ public class FolderBehaviour : MonoBehaviour
             if (timeSinceLastClick <= doubleClickTime)
             {
                 execWindow.SetActive(true);
-                execWindow.GetComponent<WindowBehaviour>().currentExe = gameObject;
+                execWindow.GetComponent<WindowBehaviour>().currentExe = transform.parent.gameObject;
             }
 
             lastClickTime = Time.time;
-        } else if (Input.GetMouseButtonDown(0) && (!isHovering))
+        }
+        else if (Input.GetMouseButtonDown(0) && (!isHovering))
         {
             rend.color = new Color(0.2971698f, 0.741266f, 1f, 0);
             frame.SetActive(false);
@@ -47,7 +42,7 @@ public class FolderBehaviour : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        if(!isSelected)
+        if (!isSelected)
             rend.color = new Color(0.2971698f, 0.741266f, 1f, 0.12f);
         else
             rend.color = new Color(0.2971698f, 0.741266f, 1f, 0.34f);
