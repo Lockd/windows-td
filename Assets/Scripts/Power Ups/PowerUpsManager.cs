@@ -50,6 +50,8 @@ public class PowerUpsManager : MonoBehaviour
     {
         for (int i = 0; i < amountToBeAdded; i++)
         {
+            if (emptyFolders.Count == 0) break;
+
             int towerIdxToAdd = Random.Range(0, emptyFolders.Count);
 
             GameObject folderToBeReplaced = emptyFolders[towerIdxToAdd];
