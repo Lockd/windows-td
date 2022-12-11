@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 14d65eb826712db4fbf5897028bc4e33, type: 3}
-  m_Name: BossWave2
+  m_Name: Wave11
   m_EditorClassIdentifier: 
-  delayBetweenMobs: 0.5
-  timeUntilNextWave: 5
-  waveMonsterPrefab: {fileID: 2113791431370209351, guid: 4735dea851fd5e34a8f0a9b1ab77b3ce, type: 3}
-  amountOfEnemiesToSpawn: 1
+  delayBetweenMobs: 0.26
+  timeUntilNextWave: 3
+  waveMonsterPrefab: {fileID: 4835626919001529454, guid: bbd4e1bec556fea4a9d4bc885f0608af, type: 3}
+  amountOfEnemiesToSpawn: 28
   shouldOfferPowerUp: 1
