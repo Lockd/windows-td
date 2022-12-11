@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: BossWave1
   m_EditorClassIdentifier: 
   delayBetweenMobs: 1
-  timeUntilNextWave: 20
+  timeUntilNextWave: 5
   waveMonsterPrefab: {fileID: 5070433618363119558, guid: 56b901df9d6d99d43afc80e7051c1cf7, type: 3}
   amountOfEnemiesToSpawn: 1
+  shouldOfferPowerUp: 1

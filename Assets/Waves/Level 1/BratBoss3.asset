@@ -16,3 +16,4 @@ MonoBehaviour:
   timeUntilNextWave: 0
   waveMonsterPrefab: {fileID: 2305136564606259601, guid: c31ce4ce86adc3d44afd24d8697dd7dd, type: 3}
   amountOfEnemiesToSpawn: 1
+  shouldOfferPowerUp: 1
