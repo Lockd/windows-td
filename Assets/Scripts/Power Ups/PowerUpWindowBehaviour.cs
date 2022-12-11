@@ -10,12 +10,12 @@ public class PowerUpWindowBehaviour : MonoBehaviour
     public PowerUpScriptableObject selectedPowerUp;
     [SerializeField] private AudioSource errorAudio;
     [SerializeField] private PowerUpsManager powerUpsManager;
-
     public TextMeshProUGUI desc;
+
+    // TODO fix the bug with select button available before power up is selected
 
     public void onSelectPowerUp()
     {
-        // TODO Apply logic for power up
         Debug.Log("power up window should be closed");
         Time.timeScale = 1;
         powerUpsManager.applyPowerUp(selectedPowerUp);

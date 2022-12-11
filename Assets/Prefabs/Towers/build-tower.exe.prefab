@@ -265,9 +265,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3079486426086884922, guid: 12837fb850ecd83498c8079433fd59c8, type: 3}
       propertyPath: m_text
-      value: '
-
-        build-tower.exe'
+      value: build-tower.exe
       objectReference: {fileID: 0}
     - target: {fileID: 3498787630984567894, guid: 12837fb850ecd83498c8079433fd59c8, type: 3}
       propertyPath: m_Name

@@ -18,11 +18,11 @@ public class TowerBehaviour : MonoBehaviour
     CircleCollider2D _collider;
     List<GameObject> targets = new List<GameObject>();
     float canShootAfter = 0f;
-
-
+    modifiers currentMods;
 
     void Start()
     {
+        currentMods = (modifiers)PowerUpsManager.modifiersList["" + type];
         _collider = GetComponent<CircleCollider2D>();
         _collider.radius = radius;
     }
@@ -33,8 +33,16 @@ public class TowerBehaviour : MonoBehaviour
         {
             shoot();
         }
+        if (_collider.radius != radius + currentMods.additionalRange)
+        {
+            updateTowerRange();
+        }
+    }
 
-
+    void updateTowerRange()
+    {
+        // Should update towers range
+        _collider.radius = radius + currentMods.additionalRange;
     }
 
     public void changeTarget(GameObject targetToRemove = null)
@@ -50,20 +58,24 @@ public class TowerBehaviour : MonoBehaviour
 
     void shoot()
     {
-        canShootAfter = Time.time + shotCooldown;
-        modifiers currentMods = (modifiers)PowerUpsManager.test["" + type];
-        GameObject spawnedProjectile = Instantiate(projectile, transform.position, Quaternion.identity);
-        BulletBehaviour bulletBehaviour = spawnedProjectile.GetComponent<BulletBehaviour>();
-        bulletBehaviour.target = targets[0];
-        bulletBehaviour.parentTower = gameObject;
-        bulletBehaviour.speed = projectileSpeed;
-        bulletBehaviour.damage = damage + currentMods.additionalDamage;
-        bulletBehaviour.sprite = spriteRenderer.sprite;
-        bulletBehaviour.size = bulletSize;
-        if (enemySpeedReduction > 0 && Random.Range(0.01f, 1f) < slowChance)
+        canShootAfter = Time.time + shotCooldown - currentMods.shotCooldownReduction;
+
+        int totalTargets = currentMods.additionalTagets + 1;
+        for (int i = 0; i < totalTargets; i++)
         {
-            bulletBehaviour.enemySpeedReduction = enemySpeedReduction;
-            bulletBehaviour.slowDuration = slowDuration + currentMods.additionalFreezeTime;
+            GameObject spawnedProjectile = Instantiate(projectile, transform.position, Quaternion.identity);
+            BulletBehaviour bulletBehaviour = spawnedProjectile.GetComponent<BulletBehaviour>();
+            bulletBehaviour.target = targets[i];
+            bulletBehaviour.parentTower = gameObject;
+            bulletBehaviour.speed = projectileSpeed;
+            bulletBehaviour.damage = damage + currentMods.additionalDamage;
+            bulletBehaviour.sprite = spriteRenderer.sprite;
+            bulletBehaviour.size = bulletSize;
+            if (enemySpeedReduction > 0 && Random.Range(0.01f, 1f) < slowChance)
+            {
+                bulletBehaviour.enemySpeedReduction = enemySpeedReduction;
+                bulletBehaviour.slowDuration = slowDuration + currentMods.additionalFreezeTime;
+            }
         }
     }
 

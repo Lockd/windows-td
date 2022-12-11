@@ -17,16 +17,15 @@ public class PowerUpsManager : MonoBehaviour
     [SerializeField] private PowerUpWindowBehaviour powerUpWidnow;
     [SerializeField] private int amountOfPowerUpsToOffer = 3;
     List<PowerUpScriptableObject> nonSelectedPowerUps;
-    public static Hashtable test = new Hashtable();
+    public static Hashtable modifiersList = new Hashtable();
+    string[] allPowerUpTypes = { "Excel", "PowerPoint", "Word", "Chrome", "Explorer" };
 
     void Start()
     {
-        //offerPowerUp();
-        test.Add("Excel", new modifiers());
-        test.Add("PowerPoint", new modifiers());
-        test.Add("Word", new modifiers());
-        test.Add("Chrome", new modifiers());
-        test.Add("Explorer", new modifiers());
+        foreach (string type in allPowerUpTypes)
+        {
+            modifiersList.Add(type, new modifiers());
+        }
     }
 
     public void offerPowerUp()
@@ -37,16 +36,30 @@ public class PowerUpsManager : MonoBehaviour
         Time.timeScale = 0;
     }
 
-    public void applyPowerUp(PowerUpScriptableObject powerUp)
+    void onChangeModifiers(PowerUpScriptableObject powerUp, string targetTower)
     {
-        // TODO VLADIK adjust this logic
-        Debug.Log("should apply power up");
-        modifiers currentMods = (modifiers)test[""+ powerUp.targetTower];
+        modifiers currentMods = (modifiers)modifiersList[targetTower];
         currentMods.additionalDamage += powerUp.additionalDamage;
         currentMods.shotCooldownReduction += powerUp.shotCooldownReduction;
         currentMods.additionalFreezeTime += powerUp.additionalFreezeTime;
         currentMods.additionalTagets += powerUp.additionalTagets;
         currentMods.additionalRange += powerUp.additionalRange;
+    }
+
+    public void applyPowerUp(PowerUpScriptableObject powerUp)
+    {
+        string targetTower = powerUp.targetTower + "";
+        if (targetTower == "All")
+        {
+            foreach (string type in allPowerUpTypes)
+            {
+                onChangeModifiers(powerUp, type);
+            }
+        }
+        else
+        {
+            onChangeModifiers(powerUp, targetTower);
+        }
     }
 
     List<PowerUpScriptableObject> getPowerUps()

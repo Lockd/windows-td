@@ -15,4 +15,4 @@ MonoBehaviour:
   delayBetweenMobs: 0.5
   timeUntilNextWave: 5
   waveMonsterPrefab: {fileID: 4835626919001529454, guid: bbd4e1bec556fea4a9d4bc885f0608af, type: 3}
-  amountOfEnemiesToSpawn: 2
+  amountOfEnemiesToSpawn: 3

@@ -11,11 +11,11 @@ public class EnemySpawnerBehaviour : MonoBehaviour
     bool isActive = true;
     int amountOfWaves;
     int currentWaveIdx = 0;
-    int currentMonsterIdx = 0;
     float canSpawnAfter = 0f;
     WaveScriptableObject currentWave;
-
-    public static int monsterAmount;
+    // values below are shown in scene manager for debugging purposes
+    [SerializeField] private int currentMonsterIdx = 0;
+    [SerializeField] private List<GameObject> spawnedMonsters = new List<GameObject>();
 
     void Start()
     {
@@ -23,18 +23,28 @@ public class EnemySpawnerBehaviour : MonoBehaviour
         {
             currentWave = waves[currentWaveIdx];
             amountOfWaves = waves.Count;
-        };
+        }
         canSpawnAfter = startSpawningAfter;
     }
 
     void Update()
     {
-         if (isActive && Time.time > canSpawnAfter)
-         {
-             spawnMonster();
-         } 
+        if (isActive && Time.time > canSpawnAfter)
+        {
+            spawnMonster();
+        }
+    }
 
-
+    public void onMonsterDeath(GameObject monster)
+    {
+        spawnedMonsters.Remove(monster);
+        if (
+            currentWave.amountOfEnemiesToSpawn == currentMonsterIdx &&
+            spawnedMonsters.Count == 0
+        )
+        {
+            onWaveFinish();
+        }
     }
 
     void spawnMonster()
@@ -44,6 +54,7 @@ public class EnemySpawnerBehaviour : MonoBehaviour
             transform.position,
             Quaternion.identity
         );
+        spawnedMonsters.Add(monster);
 
         EnemyBehaviour enemyBehaviour = monster.GetComponent<EnemyBehaviour>();
         if (monster.tag != "Boss")
@@ -59,7 +70,7 @@ public class EnemySpawnerBehaviour : MonoBehaviour
         currentMonsterIdx++;
         if (currentMonsterIdx == currentWave.amountOfEnemiesToSpawn)
         {
-            onWaveFinish();
+            isActive = false;
         }
         else
         {
@@ -69,7 +80,6 @@ public class EnemySpawnerBehaviour : MonoBehaviour
 
     void onWaveFinish()
     {
-        GameObject.Find("PowerUpManager").GetComponent<PowerUpsManager>().offerPowerUp();
         currentMonsterIdx = 0;
         Debug.Log("wave " + currentWaveIdx + " is finished");
         if (currentWaveIdx + 1 == waves.Count)
@@ -79,6 +89,8 @@ public class EnemySpawnerBehaviour : MonoBehaviour
         }
         else
         {
+            GameObject.Find("PowerUpManager").GetComponent<PowerUpsManager>().offerPowerUp();
+            isActive = true;
             canSpawnAfter = Time.time + currentWave.timeUntilNextWave;
             currentWaveIdx++;
             currentWave = waves[currentWaveIdx];

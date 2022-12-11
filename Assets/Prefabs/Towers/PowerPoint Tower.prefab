@@ -275,9 +275,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3079486426086884922, guid: 12837fb850ecd83498c8079433fd59c8, type: 3}
       propertyPath: m_text
-      value: '
-
-        Power
+      value: 'Power
 
         Point.twr'
       objectReference: {fileID: 0}

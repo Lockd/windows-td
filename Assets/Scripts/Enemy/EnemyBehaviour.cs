@@ -12,13 +12,13 @@ public class EnemyBehaviour : MonoBehaviour
     float distanceTravelled = 0f;
     float restoreSpeedAfter = 0f;
     float speedModifier = 1f;
-
     public Slider HPBar;
-
     public string enemyID;
+    EnemySpawnerBehaviour spawnerBehaviour;
 
     private void Start()
     {
+        spawnerBehaviour = GameObject.FindObjectsOfType<EnemySpawnerBehaviour>()[0];
         HPBar.minValue = 0;
         HPBar.maxValue = currentHelath;
         HPBar.value = HPBar.maxValue;
@@ -47,7 +47,7 @@ public class EnemyBehaviour : MonoBehaviour
         currentHelath -= amount;
         if (currentHelath <= 0)
         {
-            Destroy(gameObject);
+            onEnemyDeath();
         }
     }
 
@@ -60,22 +60,26 @@ public class EnemyBehaviour : MonoBehaviour
         }
     }
 
+    void onEnemyDeath()
+    {
+        spawnerBehaviour.onMonsterDeath(gameObject);
+        Destroy(gameObject);
+    }
+
     void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.tag == "Base")
         {
-            Debug.Log("Enemy collided with the base");
-            /*if (gameObject.tag == "Boss")
+            if (gameObject.tag == "Boss")
             {
-                collider.GetComponent<BaseBehaviour>().CurrentHp -=2;
+                collider.GetComponent<BaseBehaviour>().CurrentHp -= 2;
             }
             else
             {
                 collider.GetComponent<BaseBehaviour>().CurrentHp--;
-            }*/
-            // TODO Trigger game over screen here
-            Destroy(gameObject);
-            EnemySpawnerBehaviour.monsterAmount--;
+            }
+
+            onEnemyDeath();
         }
     }
 
