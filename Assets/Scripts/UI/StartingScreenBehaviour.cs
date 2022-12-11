@@ -7,14 +7,18 @@ public class StartingScreenBehaviour : MonoBehaviour
 {
     [SerializeField] private AudioSource startingSound;
     bool isTransitionInitialized = false;
+
     void Update()
     {
         if (Input.anyKeyDown && !isTransitionInitialized)
         {
             isTransitionInitialized = true;
-            startingSound.Play();
+            if (startingSound != null) startingSound.Play();
         }
-        if (isTransitionInitialized && !startingSound.isPlaying)
+        if (
+            isTransitionInitialized &&
+            (startingSound == null || !startingSound.isPlaying)
+        )
         {
             SceneManager.LoadScene("Main-scene");
         }

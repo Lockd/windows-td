@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using PathCreation;
+using UnityEngine.SceneManagement;
 
 public class EnemySpawnerBehaviour : MonoBehaviour
 {
@@ -87,7 +88,7 @@ public class EnemySpawnerBehaviour : MonoBehaviour
         if (currentWaveIdx + 1 == waves.Count)
         {
             isActive = false;
-            Debug.Log("move to next lvl");
+            SceneManager.LoadScene("Gameover-scene");
         }
         else
         {
