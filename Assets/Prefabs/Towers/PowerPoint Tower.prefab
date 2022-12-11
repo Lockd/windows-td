@@ -32,6 +32,7 @@ Transform:
   - {fileID: 2862016416728820593}
   - {fileID: 482948027121183178}
   - {fileID: 3813351065567934374}
+  - {fileID: 4499134999191853021}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -145,6 +146,7 @@ MonoBehaviour:
   slowDuration: 0
   spriteRenderer: {fileID: 3347715282213963542}
   attackTargets: 3
+  towerRangeIndicator: {fileID: 2669468859759912683}
 --- !u!50 &4167674744165022432
 Rigidbody2D:
   serializedVersion: 4
@@ -290,6 +292,73 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2699063009245361833, guid: 12837fb850ecd83498c8079433fd59c8, type: 3}
   m_PrefabInstance: {fileID: 2578092180182654819}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4347597645606764980
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3496050162177198815}
+    m_Modifications:
+    - target: {fileID: 154783163471418985, guid: e78528edd6ba09d4b8303baafc15bc2c, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 154783163471418985, guid: e78528edd6ba09d4b8303baafc15bc2c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 154783163471418985, guid: e78528edd6ba09d4b8303baafc15bc2c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 154783163471418985, guid: e78528edd6ba09d4b8303baafc15bc2c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 154783163471418985, guid: e78528edd6ba09d4b8303baafc15bc2c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 154783163471418985, guid: e78528edd6ba09d4b8303baafc15bc2c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 154783163471418985, guid: e78528edd6ba09d4b8303baafc15bc2c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 154783163471418985, guid: e78528edd6ba09d4b8303baafc15bc2c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 154783163471418985, guid: e78528edd6ba09d4b8303baafc15bc2c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 154783163471418985, guid: e78528edd6ba09d4b8303baafc15bc2c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 154783163471418985, guid: e78528edd6ba09d4b8303baafc15bc2c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827932373036279647, guid: e78528edd6ba09d4b8303baafc15bc2c, type: 3}
+      propertyPath: m_Name
+      value: Range Indicator
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e78528edd6ba09d4b8303baafc15bc2c, type: 3}
+--- !u!1 &2669468859759912683 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1827932373036279647, guid: e78528edd6ba09d4b8303baafc15bc2c, type: 3}
+  m_PrefabInstance: {fileID: 4347597645606764980}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4499134999191853021 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 154783163471418985, guid: e78528edd6ba09d4b8303baafc15bc2c, type: 3}
+  m_PrefabInstance: {fileID: 4347597645606764980}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4961079687169459769
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -301,6 +370,14 @@ PrefabInstance:
       propertyPath: menuTemp
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3830559782339294542, guid: 274c22cd196d4bc499a7221c9043fe86, type: 3}
+      propertyPath: shouldDisplayRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3830559782339294542, guid: 274c22cd196d4bc499a7221c9043fe86, type: 3}
+      propertyPath: TowerRangeIndicator
+      value: 
+      objectReference: {fileID: 2669468859759912683}
     - target: {fileID: 5216553092095498900, guid: 274c22cd196d4bc499a7221c9043fe86, type: 3}
       propertyPath: m_Name
       value: Icon Background

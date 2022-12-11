@@ -99,7 +99,7 @@ public class PowerUpsManager : MonoBehaviour
     List<PowerUpScriptableObject> getPowerUps()
     {
         List<PowerUpScriptableObject> powerUpsToOffer = new List<PowerUpScriptableObject>();
-        nonSelectedPowerUps = allPowerUps;
+        nonSelectedPowerUps = new List<PowerUpScriptableObject>(allPowerUps);
 
         for (int i = 0; i < amountOfPowerUpsToOffer; i++)
         {

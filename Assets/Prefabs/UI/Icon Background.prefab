@@ -125,10 +125,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4805f06a91da64642b4bfc2dd0c1346e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  towerRangeIndicator: {fileID: 0}
+  shouldDisplayRange: 0
   rend: {fileID: 4053531964053362306}
   frame: {fileID: 6497007069999923730}
   isHovering: 0
-  menuTemp: {fileID: 0}
 --- !u!1 &6497007069999923730
 GameObject:
   m_ObjectHideFlags: 0

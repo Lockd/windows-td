@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TowerIconBehaviour : MonoBehaviour
 {
+    [SerializeField] private GameObject TowerRangeIndicator;
     public SpriteRenderer rend;
     public GameObject frame;
     bool isSelected;
@@ -15,6 +16,8 @@ public class TowerIconBehaviour : MonoBehaviour
         {
             rend.color = new Color(0.2971698f, 0.741266f, 1f, 0);
             frame.SetActive(false);
+
+            if (TowerRangeIndicator != null) TowerRangeIndicator.SetActive(false);
         }
     }
 
@@ -68,6 +71,7 @@ public class TowerIconBehaviour : MonoBehaviour
         rend.color = new Color(0.2971698f, 0.741266f, 1f, 0.34f);
         frame.SetActive(true);
         isSelected = true;
+        if (TowerRangeIndicator != null) TowerRangeIndicator.SetActive(true);
     }
 
     public bool IsSelected
