@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using PathCreation;
+using UnityEngine.SceneManagement;
 
 public class EnemySpawnerBehaviour : MonoBehaviour
 {
@@ -87,12 +88,15 @@ public class EnemySpawnerBehaviour : MonoBehaviour
         if (currentWaveIdx + 1 == waves.Count)
         {
             isActive = false;
-            Debug.Log("move to next lvl");
+            SceneManager.LoadScene("Gameover-scene");
         }
         else
         {
-            powerUpsManager.addNewTower(1);
-            if (currentWave.shouldOfferPowerUp) powerUpsManager.offerPowerUp();
+            if (currentWave.shouldOfferPowerUp)
+            {
+                powerUpsManager.addNewTower(1);
+                powerUpsManager.offerPowerUp();
+            }
             isActive = true;
             canSpawnAfter = Time.time + currentWave.timeUntilNextWave;
             currentWaveIdx++;

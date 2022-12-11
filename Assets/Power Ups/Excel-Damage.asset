@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Excel-Damage
   m_EditorClassIdentifier: 
   targetTower: 0
-  additionalDamage: 1
+  additionalDamage: 2
   shotCooldownReduction: 0
   additionalFreezeTime: 0
   additionalTagets: 0
@@ -21,4 +21,4 @@ MonoBehaviour:
   spawnAdditionalTowers: 0
   sprite: {fileID: 1537032115, guid: b3dbb96cdaed0cd4d8942b9e386c3da7, type: 3}
   title: Excel.dmg
-  description: Increase damage of all Excel towers by 1
+  description: Increase damage of all Excel towers by 2
