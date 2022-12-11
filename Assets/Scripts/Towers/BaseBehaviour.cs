@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BaseBehaviour : MonoBehaviour
 {
-    public GameObject bsod;
     int maxHp = 3;
     [SerializeField] int currentHp;
 
@@ -15,7 +15,7 @@ public class BaseBehaviour : MonoBehaviour
 
     void Update()
     {
-        if (currentHp <= 0 && !bsod.activeSelf) bsod.SetActive(true);
+        if (currentHp <= 0) SceneManager.LoadScene("BSOD");
     }
 
     public int CurrentHp

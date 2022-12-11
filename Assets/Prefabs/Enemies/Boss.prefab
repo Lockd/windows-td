@@ -352,9 +352,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 174b843dcc3610a45beccfebe9224373, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.5
+  speed: 2
   pathCreator: {fileID: 0}
-  currentHelath: 100
+  currentHelath: 200
   HPBar: {fileID: 6478703764769011611}
   enemyID: virusBoss
 --- !u!61 &5070433618363119557

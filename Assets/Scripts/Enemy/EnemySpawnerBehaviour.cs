@@ -62,7 +62,7 @@ public class EnemySpawnerBehaviour : MonoBehaviour
         if (monster.tag != "Boss")
         {
             enemyBehaviour.CurrentHealth *= (currentWaveIdx + 1);
-            enemyBehaviour.Speed += 0.2f * (currentWaveIdx + 1);
+            enemyBehaviour.Speed += 0.1f * (currentWaveIdx + 1);
         }
         if (enemyBehaviour != null)
         {
