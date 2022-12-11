@@ -17,6 +17,7 @@ public class TowerBehaviour : MonoBehaviour
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private int attackTargets = 1;
     CircleCollider2D _collider;
+    [SerializeField] private GameObject towerRangeIndicator;
     List<GameObject> targets = new List<GameObject>();
     float canShootAfter = 0f;
     modifiers currentMods;
@@ -25,7 +26,7 @@ public class TowerBehaviour : MonoBehaviour
     {
         currentMods = (modifiers)PowerUpsManager.modifiersList["" + type];
         _collider = GetComponent<CircleCollider2D>();
-        _collider.radius = radius;
+        updateTowerRange();
     }
 
     void Update()
@@ -42,8 +43,13 @@ public class TowerBehaviour : MonoBehaviour
 
     void updateTowerRange()
     {
-        // Should update towers range
-        _collider.radius = radius + currentMods.additionalRange;
+        float newRadius = radius + currentMods.additionalRange;
+        _collider.radius = newRadius;
+        towerRangeIndicator.transform.localScale = new Vector3(
+            newRadius * 2,
+            newRadius * 2,
+            1f
+        );
     }
 
     public void changeTarget(GameObject targetToRemove = null)
