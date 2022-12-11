@@ -9,4 +9,5 @@ public class WaveScriptableObject : ScriptableObject
     public float timeUntilNextWave = 1.5f;
     public GameObject waveMonsterPrefab;
     public int amountOfEnemiesToSpawn = 10;
+    public bool shouldOfferPowerUp = false;
 }
