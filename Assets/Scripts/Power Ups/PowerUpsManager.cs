@@ -101,12 +101,7 @@ public class PowerUpsManager : MonoBehaviour
         List<PowerUpScriptableObject> powerUpsToOffer = new List<PowerUpScriptableObject>();
         nonSelectedPowerUps = allPowerUps;
 
-        int upTo;
-
-        if (nonSelectedPowerUps.Count >= amountOfPowerUpsToOffer) upTo = amountOfPowerUpsToOffer;
-        else upTo = nonSelectedPowerUps.Count;
-
-        for (int i = 0; i < upTo; i++)
+        for (int i = 0; i < amountOfPowerUpsToOffer; i++)
         {
             int powerUpIdx = Random.Range(0, nonSelectedPowerUps.Count);
             PowerUpScriptableObject powerUp = nonSelectedPowerUps[powerUpIdx];

@@ -20,7 +20,6 @@ public class PowerUpButtonBehaviour : MonoBehaviour
 
     public void addPowerUp(PowerUpScriptableObject powerUp)
     {
-        Debug.Log("power up is added ");
         activePowerUp = powerUp;
         title.text = activePowerUp.title;
         iconImage.sprite = activePowerUp.sprite;

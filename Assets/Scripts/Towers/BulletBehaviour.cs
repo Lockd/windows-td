@@ -20,7 +20,7 @@ public class BulletBehaviour : MonoBehaviour
     {
         spriteRenderer.sprite = sprite;
         transform.localScale = new Vector3(size, size, 1f);
-        dieAfter = 10 + Time.time;
+        dieAfter = 4 + Time.time;
     }
 
     void Update()
@@ -29,7 +29,10 @@ public class BulletBehaviour : MonoBehaviour
         {
             rb.velocity = (target.transform.position - transform.position).normalized * speed;
         }
-        if (Time.time > dieAfter)
+        if (
+            Time.time > dieAfter ||
+            target == null
+        )
         {
             Destroy(gameObject);
         }
