@@ -25,6 +25,7 @@ public class WindowBehaviour : MonoBehaviour
     {
         currentTower = -1;
         currentExe = null;
+        Time.timeScale = 1;
         gameObject.SetActive(false);
     }
 

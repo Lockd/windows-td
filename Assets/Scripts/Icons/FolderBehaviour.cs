@@ -29,7 +29,9 @@ public class FolderBehaviour : MonoBehaviour
             if (timeSinceLastClick <= doubleClickTime)
             {
                 execWindow.SetActive(true);
-                execWindow.GetComponent<WindowBehaviour>().currentExe = transform.parent.gameObject;
+                Time.timeScale = 0;
+                WindowBehaviour windowBehaviour = execWindow.GetComponent<WindowBehaviour>();
+                windowBehaviour.currentExe = transform.parent.gameObject;
             }
 
             lastClickTime = Time.time;
