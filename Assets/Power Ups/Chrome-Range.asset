@@ -17,8 +17,8 @@ MonoBehaviour:
   shotCooldownReduction: 0
   additionalFreezeTime: 0
   additionalTagets: 0
-  additionalRange: 5
+  additionalRange: 3
   spawnAdditionalTowers: 0
   sprite: {fileID: -308906403, guid: b3dbb96cdaed0cd4d8942b9e386c3da7, type: 3}
   title: Chrome.rng
-  description: Increase range of Chrome towers by 5
+  description: Increase range of Chrome towers by 3

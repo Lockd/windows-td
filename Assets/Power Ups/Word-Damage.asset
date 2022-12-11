@@ -19,6 +19,6 @@ MonoBehaviour:
   additionalTagets: 0
   additionalRange: 0
   spawnAdditionalTowers: 0
-  sprite: {fileID: -2089310609, guid: b3dbb96cdaed0cd4d8942b9e386c3da7, type: 3}
+  sprite: {fileID: -843576367, guid: b3dbb96cdaed0cd4d8942b9e386c3da7, type: 3}
   title: Word.dmg
   description: Increase damage of all Word towers by 2

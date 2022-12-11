@@ -19,6 +19,6 @@ MonoBehaviour:
   additionalTagets: 0
   additionalRange: 3
   spawnAdditionalTowers: 0
-  sprite: {fileID: 1537032115, guid: b3dbb96cdaed0cd4d8942b9e386c3da7, type: 3}
+  sprite: {fileID: 966167771, guid: b3dbb96cdaed0cd4d8942b9e386c3da7, type: 3}
   title: Excel.rng
   description: Increase range of all Excel towers by 3
