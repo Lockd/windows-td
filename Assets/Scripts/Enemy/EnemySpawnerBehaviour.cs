@@ -25,7 +25,7 @@ public class EnemySpawnerBehaviour : MonoBehaviour
             currentWave = waves[currentWaveIdx];
             amountOfWaves = waves.Count;
         }
-        canSpawnAfter = startSpawningAfter;
+        canSpawnAfter = startSpawningAfter + Time.time;
         powerUpsManager = GameObject.Find("PowerUpManager").GetComponent<PowerUpsManager>();
     }
 

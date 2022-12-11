@@ -8,7 +8,6 @@ public class TowerIconBehaviour : MonoBehaviour
     public GameObject frame;
     bool isSelected;
     public bool isHovering;
-    public GameObject menuTemp;
 
     void Update()
     {
@@ -16,12 +15,6 @@ public class TowerIconBehaviour : MonoBehaviour
         {
             rend.color = new Color(0.2971698f, 0.741266f, 1f, 0);
             frame.SetActive(false);
-            if (menuTemp) menuTemp.SetActive(false);
-        }
-
-        if (Input.GetMouseButtonDown(1) && (isHovering))
-        {
-            if (menuTemp) menuTemp.SetActive(true);
         }
     }
 
