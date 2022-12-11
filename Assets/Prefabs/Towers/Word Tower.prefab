@@ -135,8 +135,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 2
-  radius: 18
-  shotCooldown: 0.5
+  radius: 20
+  shotCooldown: 0.7
   projectileSpeed: 8
   damage: 4
   projectile: {fileID: 893959407976846140, guid: 16180a60d54093848af006ea03c63024, type: 3}
@@ -161,7 +161,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 18
+  m_Radius: 20
 --- !u!50 &5150928940452587974
 Rigidbody2D:
   serializedVersion: 4

@@ -61,6 +61,7 @@ public class TowerBehaviour : MonoBehaviour
     {
         canShootAfter = Time.time + shotCooldown - currentMods.shotCooldownReduction;
 
+        // TODO fix error here
         int totalTargets = attackTargets + currentMods.additionalTagets;
         for (int i = 0; i < totalTargets; i++)
         {

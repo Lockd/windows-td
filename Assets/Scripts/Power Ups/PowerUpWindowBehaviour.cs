@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class PowerUpWindowBehaviour : MonoBehaviour
@@ -10,9 +11,16 @@ public class PowerUpWindowBehaviour : MonoBehaviour
     public PowerUpScriptableObject selectedPowerUp;
     [SerializeField] private AudioSource errorAudio;
     [SerializeField] private PowerUpsManager powerUpsManager;
+    [SerializeField] private GameObject selectButton;
     public TextMeshProUGUI desc;
 
-    // TODO fix the bug with select button available before power up is selected
+    void Update()
+    {
+        if (selectedPowerUp != null && !selectButton.activeInHierarchy)
+        {
+            selectButton.SetActive(true);
+        }
+    }
 
     public void onSelectPowerUp()
     {
@@ -25,6 +33,7 @@ public class PowerUpWindowBehaviour : MonoBehaviour
 
     public void onEnable()
     {
+        selectButton.SetActive(false);
         Time.timeScale = 0;
         for (int i = 0; i < powerUps.Count; i++)
         {
