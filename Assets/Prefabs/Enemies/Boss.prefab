@@ -354,7 +354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   pathCreator: {fileID: 0}
-  currentHelath: 200
+  currentHelath: 175
   HPBar: {fileID: 6478703764769011611}
   enemyID: virusBoss
 --- !u!61 &5070433618363119557
