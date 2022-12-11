@@ -15,6 +15,8 @@ public class EnemySpawnerBehaviour : MonoBehaviour
     float canSpawnAfter = 0f;
     WaveScriptableObject currentWave;
 
+    public static int monsterAmount;
+
     void Start()
     {
         if (waves != null)
@@ -27,10 +29,12 @@ public class EnemySpawnerBehaviour : MonoBehaviour
 
     void Update()
     {
-        if (isActive && Time.time > canSpawnAfter)
-        {
-            spawnMonster();
-        }
+         if (isActive && Time.time > canSpawnAfter)
+         {
+             spawnMonster();
+         } 
+
+
     }
 
     void spawnMonster()
@@ -65,6 +69,7 @@ public class EnemySpawnerBehaviour : MonoBehaviour
 
     void onWaveFinish()
     {
+        GameObject.Find("PowerUpManager").GetComponent<PowerUpsManager>().offerPowerUp();
         currentMonsterIdx = 0;
         Debug.Log("wave " + currentWaveIdx + " is finished");
         if (currentWaveIdx + 1 == waves.Count)

@@ -19,6 +19,8 @@ public class TowerBehaviour : MonoBehaviour
     List<GameObject> targets = new List<GameObject>();
     float canShootAfter = 0f;
 
+
+
     void Start()
     {
         _collider = GetComponent<CircleCollider2D>();
@@ -32,11 +34,7 @@ public class TowerBehaviour : MonoBehaviour
             shoot();
         }
 
-        // TODO VLADIK REMOVE THIS SHITE
-        modifiers currentMods = (modifiers)PowerUpsManager.test[type];
 
-        Debug.Log("Additional damage from tower");
-        Debug.Log(currentMods.additionalDamage);
     }
 
     public void changeTarget(GameObject targetToRemove = null)
@@ -53,19 +51,19 @@ public class TowerBehaviour : MonoBehaviour
     void shoot()
     {
         canShootAfter = Time.time + shotCooldown;
-
+        modifiers currentMods = (modifiers)PowerUpsManager.test["" + type];
         GameObject spawnedProjectile = Instantiate(projectile, transform.position, Quaternion.identity);
         BulletBehaviour bulletBehaviour = spawnedProjectile.GetComponent<BulletBehaviour>();
         bulletBehaviour.target = targets[0];
         bulletBehaviour.parentTower = gameObject;
         bulletBehaviour.speed = projectileSpeed;
-        bulletBehaviour.damage = damage;
+        bulletBehaviour.damage = damage + currentMods.additionalDamage;
         bulletBehaviour.sprite = spriteRenderer.sprite;
         bulletBehaviour.size = bulletSize;
         if (enemySpeedReduction > 0 && Random.Range(0.01f, 1f) < slowChance)
         {
             bulletBehaviour.enemySpeedReduction = enemySpeedReduction;
-            bulletBehaviour.slowDuration = slowDuration;
+            bulletBehaviour.slowDuration = slowDuration + currentMods.additionalFreezeTime;
         }
     }
 

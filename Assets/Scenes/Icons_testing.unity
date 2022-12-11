@@ -1678,7 +1678,7 @@ RectTransform:
   - {fileID: 1036236314}
   - {fileID: 838046825}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1787,7 +1787,7 @@ Transform:
   - {fileID: 1620130962}
   - {fileID: 38674238}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &262887983 stripped
 Transform:
@@ -2175,7 +2175,7 @@ GameObject:
   - component: {fileID: 351421707}
   - component: {fileID: 351421706}
   m_Layer: 0
-  m_Name: Power up manager
+  m_Name: PowerUpManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2197,6 +2197,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 515a2b774c33e354c8caa2078cde9fc9, type: 2}
   - {fileID: 11400000, guid: 1754509bf37b38d42bf25df7e4b66d23, type: 2}
   - {fileID: 11400000, guid: 9870347efe36887419604b933073a0f2, type: 2}
+  - {fileID: 11400000, guid: d32bbe68837fb5f41a5412ef834f3f95, type: 2}
+  - {fileID: 11400000, guid: 18bc9f50342159040bb59a338d38634b, type: 2}
   powerUpWidnow: {fileID: 838046824}
   amountOfPowerUpsToOffer: 3
 --- !u!4 &351421707
@@ -2212,7 +2214,38 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &354316887
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 354316888}
+  m_Layer: 0
+  m_Name: Test
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &354316888
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354316887}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.39, y: 1.39, z: 1.39}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &362109738 stripped
 Transform:
@@ -4581,6 +4614,7 @@ MonoBehaviour:
   selectedPowerUp: {fileID: 0}
   errorAudio: {fileID: 838046826}
   powerUpsManager: {fileID: 351421706}
+  desc: {fileID: 1755424998}
 --- !u!224 &838046825
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5278,7 +5312,7 @@ Transform:
   - {fileID: 313672015}
   - {fileID: 425378785}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &899389872 stripped
 Transform:
@@ -6555,7 +6589,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1102741309
 PrefabInstance:
@@ -7867,7 +7901,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1390881839
 PrefabInstance:
@@ -10132,7 +10166,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1757349128
 MonoBehaviour:
@@ -11475,7 +11509,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7475999022381062748, guid: 94495d0fd0a4a184989c6f9ab54f9aef, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7475999022381062748, guid: 94495d0fd0a4a184989c6f9ab54f9aef, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11526,9 +11560,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1757349128}
     - target: {fileID: 7475999022381062751, guid: 94495d0fd0a4a184989c6f9ab54f9aef, type: 3}
+      propertyPath: waves.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475999022381062751, guid: 94495d0fd0a4a184989c6f9ab54f9aef, type: 3}
       propertyPath: startSpawningAfter
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7475999022381062751, guid: 94495d0fd0a4a184989c6f9ab54f9aef, type: 3}
+      propertyPath: waves.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 80beec83bbcda3649b22d934b53cad77, type: 2}
+    - target: {fileID: 7475999022381062751, guid: 94495d0fd0a4a184989c6f9ab54f9aef, type: 3}
+      propertyPath: waves.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 80beec83bbcda3649b22d934b53cad77, type: 2}
+    - target: {fileID: 7475999022381062751, guid: 94495d0fd0a4a184989c6f9ab54f9aef, type: 3}
+      propertyPath: waves.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 80beec83bbcda3649b22d934b53cad77, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94495d0fd0a4a184989c6f9ab54f9aef, type: 3}
 --- !u!4 &2008327815 stripped
@@ -11737,7 +11787,7 @@ Transform:
   - {fileID: 1557411167}
   - {fileID: 715242234}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2020974891 stripped
 Transform:
@@ -11899,7 +11949,7 @@ Transform:
   - {fileID: 848911197}
   - {fileID: 1343441277}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2035075221
 PrefabInstance:

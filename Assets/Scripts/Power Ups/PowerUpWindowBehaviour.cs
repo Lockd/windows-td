@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PowerUpWindowBehaviour : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class PowerUpWindowBehaviour : MonoBehaviour
     [SerializeField] private AudioSource errorAudio;
     [SerializeField] private PowerUpsManager powerUpsManager;
 
+    public TextMeshProUGUI desc;
+
     public void onSelectPowerUp()
     {
         // TODO Apply logic for power up
@@ -17,6 +20,7 @@ public class PowerUpWindowBehaviour : MonoBehaviour
         Time.timeScale = 1;
         powerUpsManager.applyPowerUp(selectedPowerUp);
         selectedPowerUp = null;
+        desc.text = "";
         gameObject.SetActive(false);
     }
 

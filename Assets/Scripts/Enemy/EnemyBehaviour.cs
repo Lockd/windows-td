@@ -65,16 +65,17 @@ public class EnemyBehaviour : MonoBehaviour
         if (collider.gameObject.tag == "Base")
         {
             Debug.Log("Enemy collided with the base");
-            if (gameObject.tag == "Boss")
+            /*if (gameObject.tag == "Boss")
             {
                 collider.GetComponent<BaseBehaviour>().CurrentHp -=2;
             }
             else
             {
                 collider.GetComponent<BaseBehaviour>().CurrentHp--;
-            }
+            }*/
             // TODO Trigger game over screen here
             Destroy(gameObject);
+            EnemySpawnerBehaviour.monsterAmount--;
         }
     }
 

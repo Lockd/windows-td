@@ -12,13 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e22e6cea398a90d4cbbd057682fe52de, type: 3}
   m_Name: Chrome Buff
   m_EditorClassIdentifier: 
-  targetTower: 0
-  additionalDamage: 0
+  targetTower: 3
+  additionalDamage: 1
   shotCooldownReduction: 0
   additionalFreezeTime: 0
-  additionalTagets: 1
+  additionalTagets: 0
   additionalRange: 0
   spawnAdditionalTowers: 0
   sprite: {fileID: -308906403, guid: b3dbb96cdaed0cd4d8942b9e386c3da7, type: 3}
   title: Chrome.dmg
-  description: Increase amount of enemies targeted by all your Excel.twr by 1
+  description: 'adds to Chrome.twr:
+
+    1 additional damage'
