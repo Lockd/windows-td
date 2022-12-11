@@ -14,6 +14,6 @@ public class GameOverBehaviour : MonoBehaviour
 
     void RestartGame()
     {
-        SceneManager.LoadScene("Main-scene_testing");
+        SceneManager.LoadScene("Main-scene");
     }
 }
