@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 2113791431370209350}
   - component: {fileID: 2113791431370209347}
   m_Layer: 0
-  m_Name: mac
+  m_Name: mac_final
   m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -265,9 +265,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 174b843dcc3610a45beccfebe9224373, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.5
+  speed: 2.8
   pathCreator: {fileID: 0}
-  currentHelath: 250
+  currentHelath: 1500
   HPBar: {fileID: 6977696888647383096}
   enemyID: macBoss
 --- !u!61 &2113791431370209347

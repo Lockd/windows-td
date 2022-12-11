@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 14d65eb826712db4fbf5897028bc4e33, type: 3}
-  m_Name: Wave10
+  m_Name: FinalBoss1
   m_EditorClassIdentifier: 
-  delayBetweenMobs: 0.28
-  timeUntilNextWave: 3
-  waveMonsterPrefab: {fileID: 4835626919001529454, guid: bbd4e1bec556fea4a9d4bc885f0608af, type: 3}
-  amountOfEnemiesToSpawn: 35
-  shouldOfferPowerUp: 1
+  delayBetweenMobs: 0.5
+  timeUntilNextWave: 1.5
+  waveMonsterPrefab: {fileID: 5070433618363119558, guid: 3f34cbcffcbad9c4f9200a5715838fbd, type: 3}
+  amountOfEnemiesToSpawn: 1
+  shouldOfferPowerUp: 0

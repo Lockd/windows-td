@@ -188,7 +188,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 20
   m_Sprite: {fileID: 267563703, guid: 5aeafa8fb1df93a48992cbf6ec558c5b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -238,10 +238,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 174b843dcc3610a45beccfebe9224373, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.5
+  speed: 3
   pathCreator: {fileID: 0}
-  currentHelath: 150
-  HPBar: {fileID: 0}
+  currentHelath: 375
+  HPBar: {fileID: 6226191135180481435}
   enemyID: bratBoss
 --- !u!1 &4571662810632909133
 GameObject:

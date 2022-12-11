@@ -266,7 +266,7 @@ GameObject:
   - component: {fileID: 5070433618363119556}
   - component: {fileID: 5070433618363119557}
   m_Layer: 0
-  m_Name: Boss
+  m_Name: Boss_final
   m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -352,9 +352,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 174b843dcc3610a45beccfebe9224373, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 3
   pathCreator: {fileID: 0}
-  currentHelath: 175
+  currentHelath: 1200
   HPBar: {fileID: 6478703764769011611}
   enemyID: virusBoss
 --- !u!61 &5070433618363119557
