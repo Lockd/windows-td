@@ -114,7 +114,7 @@ GameObject:
   - component: {fileID: 1860356508393027620}
   - component: {fileID: 8765942811251875730}
   m_Layer: 0
-  m_Name: Brat3
+  m_Name: Brat3_final
   m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -226,9 +226,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 174b843dcc3610a45beccfebe9224373, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 4
   pathCreator: {fileID: 0}
-  currentHelath: 300
+  currentHelath: 1800
   HPBar: {fileID: 8858204893712407078}
   enemyID: bratBoss
 --- !u!1 &3833239150448210317

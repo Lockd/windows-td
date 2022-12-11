@@ -267,7 +267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1.5
   pathCreator: {fileID: 0}
-  currentHelath: 150
+  currentHelath: 250
   HPBar: {fileID: 6977696888647383096}
   enemyID: macBoss
 --- !u!61 &2113791431370209347
