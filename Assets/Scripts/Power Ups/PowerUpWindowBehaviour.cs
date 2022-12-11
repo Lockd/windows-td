@@ -16,7 +16,6 @@ public class PowerUpWindowBehaviour : MonoBehaviour
 
     public void onSelectPowerUp()
     {
-        Debug.Log("power up window should be closed");
         Time.timeScale = 1;
         powerUpsManager.applyPowerUp(selectedPowerUp);
         selectedPowerUp = null;
@@ -26,12 +25,10 @@ public class PowerUpWindowBehaviour : MonoBehaviour
 
     public void onEnable()
     {
-        Debug.Log("power up window is enabled");
         Time.timeScale = 0;
         for (int i = 0; i < powerUps.Count; i++)
         {
             GameObject childGameObject = powerUpCardsContainer.transform.GetChild(i).gameObject;
-            Debug.Log(childGameObject.name);
             PowerUpButtonBehaviour powerUpButton = childGameObject.GetComponent<PowerUpButtonBehaviour>();
             if (powerUpButton != null) powerUpButton.addPowerUp(powerUps[i]);
         }

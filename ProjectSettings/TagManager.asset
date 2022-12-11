@@ -10,6 +10,7 @@ TagManager:
   - Window_exe
   - Icon
   - Boss
+  - Empty Folder
   layers:
   - Default
   - TransparentFX

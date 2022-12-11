@@ -13,6 +13,7 @@ public class EnemySpawnerBehaviour : MonoBehaviour
     int currentWaveIdx = 0;
     float canSpawnAfter = 0f;
     WaveScriptableObject currentWave;
+    PowerUpsManager powerUpsManager;
     // values below are shown in scene manager for debugging purposes
     [SerializeField] private int currentMonsterIdx = 0;
     [SerializeField] private List<GameObject> spawnedMonsters = new List<GameObject>();
@@ -25,6 +26,7 @@ public class EnemySpawnerBehaviour : MonoBehaviour
             amountOfWaves = waves.Count;
         }
         canSpawnAfter = startSpawningAfter;
+        powerUpsManager = GameObject.Find("PowerUpManager").GetComponent<PowerUpsManager>();
     }
 
     void Update()
@@ -89,7 +91,8 @@ public class EnemySpawnerBehaviour : MonoBehaviour
         }
         else
         {
-            GameObject.Find("PowerUpManager").GetComponent<PowerUpsManager>().offerPowerUp();
+            powerUpsManager.addNewTower(1);
+            powerUpsManager.offerPowerUp();
             isActive = true;
             canSpawnAfter = Time.time + currentWave.timeUntilNextWave;
             currentWaveIdx++;

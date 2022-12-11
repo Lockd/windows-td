@@ -187,11 +187,11 @@ MonoBehaviour:
   descriptionText: 'Chrome has a chance to stun, dealing a huge damage:
 
     - 5
-    damage, 10% chance to stun enemy
+    damage, 50% chance to stun enemy
 
     - Slow attack speed
 
-    - Smaller range'
+    - Medium range'
 --- !u!114 &10382461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -742,6 +742,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Empty Folder (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
+      propertyPath: m_TagString
+      value: Empty Folder
+      objectReference: {fileID: 0}
     - target: {fileID: 7617858483164686950, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_RootOrder
       value: 22
@@ -798,6 +802,10 @@ PrefabInstance:
     - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_Name
       value: Empty Folder (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
+      propertyPath: m_TagString
+      value: Empty Folder
       objectReference: {fileID: 0}
     - target: {fileID: 7617858483164686950, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_RootOrder
@@ -1189,7 +1197,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
+      propertyPath: m_TagString
+      value: Empty Folder
       objectReference: {fileID: 0}
     - target: {fileID: 7617858483164686950, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_RootOrder
@@ -2061,6 +2073,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Empty Folder (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
+      propertyPath: m_TagString
+      value: Empty Folder
+      objectReference: {fileID: 0}
     - target: {fileID: 7617858483164686950, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -2194,13 +2210,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allPowerUps:
-  - {fileID: 11400000, guid: 515a2b774c33e354c8caa2078cde9fc9, type: 2}
-  - {fileID: 11400000, guid: 1754509bf37b38d42bf25df7e4b66d23, type: 2}
-  - {fileID: 11400000, guid: 9870347efe36887419604b933073a0f2, type: 2}
-  - {fileID: 11400000, guid: d32bbe68837fb5f41a5412ef834f3f95, type: 2}
-  - {fileID: 11400000, guid: 18bc9f50342159040bb59a338d38634b, type: 2}
+  - {fileID: 11400000, guid: c8fbc1d4763a5454b866333d27a73fa5, type: 2}
+  - {fileID: 11400000, guid: da38700d6363622469921f7e889bad86, type: 2}
+  - {fileID: 11400000, guid: 04ed491ebf2acb44ba4bd7357b15ceb4, type: 2}
+  - {fileID: 11400000, guid: bf780094699367e42ba08936654e5a09, type: 2}
+  - {fileID: 11400000, guid: a1bdbec56a0b9d14c98ad8f26c9e6e2d, type: 2}
+  - {fileID: 11400000, guid: ca9be17d0e4f40f499d6eacee8e48614, type: 2}
+  - {fileID: 11400000, guid: 9fd6fa07931ffb6488aa99b481e49662, type: 2}
+  - {fileID: 11400000, guid: b5af183c80b77db4cb539c9b75aae619, type: 2}
+  - {fileID: 11400000, guid: 870517e67aef14b46b5d72de14f1532b, type: 2}
+  - {fileID: 11400000, guid: ce303edfd5ecc1547b5ca9dbcd195a85, type: 2}
+  - {fileID: 11400000, guid: 7ac8e8f295bef70429163a3a9b0a9b4a, type: 2}
+  - {fileID: 11400000, guid: b7355ac746d6b504fb127f70c39ad949, type: 2}
+  - {fileID: 11400000, guid: 737d99c79ad45704c89c82124225f870, type: 2}
+  - {fileID: 11400000, guid: 262f28d344173ea4f8d6272468ffbb75, type: 2}
+  - {fileID: 11400000, guid: fc203e8d2160a28458b3457fe9fa71db, type: 2}
+  - {fileID: 11400000, guid: 8955325d9b59f334da1310b04221a932, type: 2}
+  - {fileID: 11400000, guid: e2284ecf0cf645143a7b380fde4fe88b, type: 2}
+  - {fileID: 11400000, guid: 610bbbaa15eb21749a3fae0c76037931, type: 2}
   powerUpWidnow: {fileID: 838046824}
   amountOfPowerUpsToOffer: 3
+  buildTowerPrefab: {fileID: 2342143294154744541, guid: 75d036dc45a2e2245892f5291f7095fa, type: 3}
+  emptyFolders: []
 --- !u!4 &351421707
 Transform:
   m_ObjectHideFlags: 0
@@ -2780,6 +2811,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Empty Folder (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
+      propertyPath: m_TagString
+      value: Empty Folder
+      objectReference: {fileID: 0}
     - target: {fileID: 7617858483164686950, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -3065,7 +3100,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
+      propertyPath: m_TagString
+      value: Empty Folder
       objectReference: {fileID: 0}
     - target: {fileID: 7617858483164686950, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_RootOrder
@@ -3195,6 +3234,10 @@ PrefabInstance:
     - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_Name
       value: Empty Folder (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
+      propertyPath: m_TagString
+      value: Empty Folder
       objectReference: {fileID: 0}
     - target: {fileID: 7617858483164686950, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_RootOrder
@@ -3377,6 +3420,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Empty Folder (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
+      propertyPath: m_TagString
+      value: Empty Folder
+      objectReference: {fileID: 0}
     - target: {fileID: 7617858483164686950, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_RootOrder
       value: 26
@@ -3496,6 +3543,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Empty Folder (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
+      propertyPath: m_TagString
+      value: Empty Folder
+      objectReference: {fileID: 0}
     - target: {fileID: 7617858483164686950, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_RootOrder
       value: 21
@@ -3609,6 +3660,10 @@ PrefabInstance:
     - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_Name
       value: Empty Folder (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
+      propertyPath: m_TagString
+      value: Empty Folder
       objectReference: {fileID: 0}
     - target: {fileID: 7617858483164686950, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_RootOrder
@@ -3728,6 +3783,10 @@ PrefabInstance:
     - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_Name
       value: Empty Folder (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
+      propertyPath: m_TagString
+      value: Empty Folder
       objectReference: {fileID: 0}
     - target: {fileID: 7617858483164686950, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_RootOrder
@@ -4196,6 +4255,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Empty Folder (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
+      propertyPath: m_TagString
+      value: Empty Folder
+      objectReference: {fileID: 0}
     - target: {fileID: 7617858483164686950, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_RootOrder
       value: 27
@@ -4522,6 +4585,10 @@ PrefabInstance:
     - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_Name
       value: Empty Folder (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
+      propertyPath: m_TagString
+      value: Empty Folder
       objectReference: {fileID: 0}
     - target: {fileID: 7617858483164686950, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_RootOrder
@@ -4899,14 +4966,14 @@ MonoBehaviour:
   towerIndex: 0
   selectButton: {fileID: 851408841}
   windowBeh: {fileID: 1036236315}
-  descriptionText: 'Word is a pretty average tower:
+  descriptionText: 'Word is a tower with high range and high damage, but slow speed:
 
-    - 2 Damage
+    -
+    4 Damage
 
-    - Medium
-    range
+    - High range
 
-    - Medium attack speed'
+    - Slow attack speed'
 --- !u!114 &851408841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5050,10 +5117,10 @@ MonoBehaviour:
   towerIndex: 1
   selectButton: {fileID: 859686715}
   windowBeh: {fileID: 1036236315}
-  descriptionText: 'Power point deals AOE damage but with a high cooldown:
+  descriptionText: 'Power point can attack 3 targets at the same time:
 
-    -
-    4 Damage, AOE
+    - 3 Damage,
+    targets 3 enemies
 
     - Medium range
 
@@ -5373,6 +5440,10 @@ PrefabInstance:
     - target: {fileID: 2342143294154744541, guid: 75d036dc45a2e2245892f5291f7095fa, type: 3}
       propertyPath: m_Name
       value: build-tower.exe (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342143294154744541, guid: 75d036dc45a2e2245892f5291f7095fa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75d036dc45a2e2245892f5291f7095fa, type: 3}
@@ -5853,6 +5924,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Empty Folder (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
+      propertyPath: m_TagString
+      value: Empty Folder
+      objectReference: {fileID: 0}
     - target: {fileID: 7617858483164686950, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_RootOrder
       value: 29
@@ -6095,6 +6170,10 @@ PrefabInstance:
     - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_Name
       value: Empty Folder (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
+      propertyPath: m_TagString
+      value: Empty Folder
       objectReference: {fileID: 0}
     - target: {fileID: 7617858483164686950, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_RootOrder
@@ -6399,6 +6478,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Empty Folder (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
+      propertyPath: m_TagString
+      value: Empty Folder
+      objectReference: {fileID: 0}
     - target: {fileID: 7617858483164686950, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -6601,6 +6684,10 @@ PrefabInstance:
     - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_Name
       value: Empty Folder (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
+      propertyPath: m_TagString
+      value: Empty Folder
       objectReference: {fileID: 0}
     - target: {fileID: 7617858483164686950, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_RootOrder
@@ -6844,6 +6931,10 @@ PrefabInstance:
     - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_Name
       value: Empty Folder (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
+      propertyPath: m_TagString
+      value: Empty Folder
       objectReference: {fileID: 0}
     - target: {fileID: 7617858483164686950, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_RootOrder
@@ -7139,6 +7230,10 @@ PrefabInstance:
     - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_Name
       value: Empty Folder (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
+      propertyPath: m_TagString
+      value: Empty Folder
       objectReference: {fileID: 0}
     - target: {fileID: 7617858483164686950, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_RootOrder
@@ -7471,6 +7566,10 @@ PrefabInstance:
     - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_Name
       value: Empty Folder (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
+      propertyPath: m_TagString
+      value: Empty Folder
       objectReference: {fileID: 0}
     - target: {fileID: 7617858483164686950, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_RootOrder
@@ -8437,6 +8536,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Empty Folder (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
+      propertyPath: m_TagString
+      value: Empty Folder
+      objectReference: {fileID: 0}
     - target: {fileID: 7617858483164686950, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -9278,6 +9381,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Empty Folder (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
+      propertyPath: m_TagString
+      value: Empty Folder
+      objectReference: {fileID: 0}
     - target: {fileID: 7617858483164686950, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_RootOrder
       value: 23
@@ -9873,6 +9980,10 @@ PrefabInstance:
     - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_Name
       value: Empty Folder (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
+      propertyPath: m_TagString
+      value: Empty Folder
       objectReference: {fileID: 0}
     - target: {fileID: 7617858483164686950, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_RootOrder
@@ -10589,7 +10700,7 @@ MonoBehaviour:
   windowBeh: {fileID: 1036236315}
   descriptionText: 'Explorer tower slows enemies down on hit:
 
-    - 1 damage, 60%
+    - 2 damage, 60%
     move speed reduction
 
     - Medium attack speed
@@ -10692,6 +10803,10 @@ PrefabInstance:
     - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_Name
       value: Empty Folder (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
+      propertyPath: m_TagString
+      value: Empty Folder
       objectReference: {fileID: 0}
     - target: {fileID: 7617858483164686950, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_RootOrder
@@ -10879,7 +10994,7 @@ MonoBehaviour:
     - Fast attack
     speed
 
-    - Medium range'
+    - Short range'
 --- !u!114 &1892960975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11388,6 +11503,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Empty Folder (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
+      propertyPath: m_TagString
+      value: Empty Folder
+      objectReference: {fileID: 0}
     - target: {fileID: 7617858483164686950, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_RootOrder
       value: 30
@@ -11806,6 +11925,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Empty Folder (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
+      propertyPath: m_TagString
+      value: Empty Folder
+      objectReference: {fileID: 0}
     - target: {fileID: 7617858483164686950, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -11962,6 +12085,10 @@ PrefabInstance:
     - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_Name
       value: Empty Folder (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
+      propertyPath: m_TagString
+      value: Empty Folder
       objectReference: {fileID: 0}
     - target: {fileID: 7617858483164686950, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_RootOrder
@@ -12465,6 +12592,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Empty Folder (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 7617858483164686948, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
+      propertyPath: m_TagString
+      value: Empty Folder
+      objectReference: {fileID: 0}
     - target: {fileID: 7617858483164686950, guid: 3959e100c25d4ad4e87339bafa0cf1bd, type: 3}
       propertyPath: m_RootOrder
       value: 31
@@ -12565,6 +12696,10 @@ PrefabInstance:
     - target: {fileID: 2342143294154744541, guid: 75d036dc45a2e2245892f5291f7095fa, type: 3}
       propertyPath: m_Name
       value: build-tower.exe
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342143294154744541, guid: 75d036dc45a2e2245892f5291f7095fa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2342143294319305880, guid: 75d036dc45a2e2245892f5291f7095fa, type: 3}
       propertyPath: m_Camera

@@ -135,16 +135,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 4
-  radius: 12
+  radius: 14
   shotCooldown: 0.5
   projectileSpeed: 8
-  damage: 1
+  damage: 2
   projectile: {fileID: 893959407976846140, guid: 16180a60d54093848af006ea03c63024, type: 3}
   bulletSize: 0.1
   enemySpeedReduction: 0.6
   slowChance: 1
   slowDuration: 0.5
   spriteRenderer: {fileID: 5436640384475979640}
+  attackTargets: 1
 --- !u!58 &54934990637297341
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -160,7 +161,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 12
+  m_Radius: 14
 --- !u!50 &18723859826977840
 Rigidbody2D:
   serializedVersion: 4

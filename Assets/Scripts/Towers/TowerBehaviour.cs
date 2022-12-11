@@ -15,6 +15,7 @@ public class TowerBehaviour : MonoBehaviour
     [Range(0, 1)][SerializeField] private float slowChance = 0f;
     [SerializeField] private float slowDuration = 0f;
     [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private int attackTargets = 1;
     CircleCollider2D _collider;
     List<GameObject> targets = new List<GameObject>();
     float canShootAfter = 0f;
@@ -60,7 +61,7 @@ public class TowerBehaviour : MonoBehaviour
     {
         canShootAfter = Time.time + shotCooldown - currentMods.shotCooldownReduction;
 
-        int totalTargets = currentMods.additionalTagets + 1;
+        int totalTargets = attackTargets + currentMods.additionalTagets;
         for (int i = 0; i < totalTargets; i++)
         {
             GameObject spawnedProjectile = Instantiate(projectile, transform.position, Quaternion.identity);

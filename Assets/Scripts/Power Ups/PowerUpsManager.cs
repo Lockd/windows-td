@@ -16,12 +16,19 @@ public class PowerUpsManager : MonoBehaviour
     [SerializeField] private List<PowerUpScriptableObject> allPowerUps;
     [SerializeField] private PowerUpWindowBehaviour powerUpWidnow;
     [SerializeField] private int amountOfPowerUpsToOffer = 3;
+    [SerializeField] private GameObject buildTowerPrefab;
     List<PowerUpScriptableObject> nonSelectedPowerUps;
+    public List<GameObject> emptyFolders = new List<GameObject>();
     public static Hashtable modifiersList = new Hashtable();
     string[] allPowerUpTypes = { "Excel", "PowerPoint", "Word", "Chrome", "Explorer" };
 
     void Start()
     {
+        GameObject[] allEmptyFolders = GameObject.FindGameObjectsWithTag("Empty Folder");
+        emptyFolders.AddRange(allEmptyFolders);
+
+        addNewTower(2);
+
         foreach (string type in allPowerUpTypes)
         {
             modifiersList.Add(type, new modifiers());
@@ -34,6 +41,23 @@ public class PowerUpsManager : MonoBehaviour
         powerUpWidnow.powerUps = getPowerUps();
         powerUpWidnow.onEnable();
         Time.timeScale = 0;
+    }
+
+    public void addNewTower(int amountToBeAdded)
+    {
+        for (int i = 0; i < amountToBeAdded; i++)
+        {
+            int towerIdxToAdd = Random.Range(0, emptyFolders.Count);
+
+            GameObject folderToBeReplaced = emptyFolders[towerIdxToAdd];
+            emptyFolders.Remove(folderToBeReplaced);
+            Instantiate(
+                buildTowerPrefab,
+                folderToBeReplaced.transform.position,
+                folderToBeReplaced.transform.rotation
+            );
+            Destroy(folderToBeReplaced);
+        }
     }
 
     void onChangeModifiers(PowerUpScriptableObject powerUp, string targetTower)
@@ -49,16 +73,23 @@ public class PowerUpsManager : MonoBehaviour
     public void applyPowerUp(PowerUpScriptableObject powerUp)
     {
         string targetTower = powerUp.targetTower + "";
-        if (targetTower == "All")
+        switch (targetTower)
         {
-            foreach (string type in allPowerUpTypes)
-            {
-                onChangeModifiers(powerUp, type);
-            }
-        }
-        else
-        {
-            onChangeModifiers(powerUp, targetTower);
+            case "Generic":
+                if (powerUp.spawnAdditionalTowers != 0)
+                {
+                    addNewTower(powerUp.spawnAdditionalTowers);
+                }
+                break;
+            case "All":
+                foreach (string type in allPowerUpTypes)
+                {
+                    onChangeModifiers(powerUp, type);
+                }
+                break;
+            default:
+                onChangeModifiers(powerUp, targetTower);
+                break;
         }
     }
 

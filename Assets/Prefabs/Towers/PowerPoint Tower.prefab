@@ -138,13 +138,14 @@ MonoBehaviour:
   radius: 12
   shotCooldown: 0.5
   projectileSpeed: 12
-  damage: 1
+  damage: 3
   projectile: {fileID: 893959407976846140, guid: 16180a60d54093848af006ea03c63024, type: 3}
   bulletSize: 0.1
   enemySpeedReduction: 0
   slowChance: 0
   slowDuration: 0
   spriteRenderer: {fileID: 3347715282213963542}
+  attackTargets: 3
 --- !u!50 &4167674744165022432
 Rigidbody2D:
   serializedVersion: 4
