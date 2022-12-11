@@ -29,9 +29,12 @@ public class PowerUpsManager : MonoBehaviour
 
         addNewTower(2);
 
-        foreach (string type in allPowerUpTypes)
+        if (modifiersList.Count == 0)
         {
-            modifiersList.Add(type, new modifiers());
+            foreach (string type in allPowerUpTypes)
+            {
+                modifiersList.Add(type, new modifiers());
+            }
         }
     }
 

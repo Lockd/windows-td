@@ -14,19 +14,24 @@ public class BulletBehaviour : MonoBehaviour
     public float size = .2f;
     public float enemySpeedReduction = 0f;
     public float slowDuration = 0f;
+    float dieAfter;
 
     void Start()
     {
         spriteRenderer.sprite = sprite;
         transform.localScale = new Vector3(size, size, 1f);
+        dieAfter = 10 + Time.time;
     }
 
     void Update()
     {
         if (target != null && speed > 0f)
         {
-            // TODO delete bullets if target is dead
             rb.velocity = (target.transform.position - transform.position).normalized * speed;
+        }
+        if (Time.time > dieAfter)
+        {
+            Destroy(gameObject);
         }
     }
 

@@ -58,6 +58,10 @@ public class EnemyBehaviour : MonoBehaviour
         {
             speedModifier -= speedReduction;
         }
+        if (speedModifier < 0)
+        {
+            speedModifier = 0;
+        }
     }
 
     void onEnemyDeath()

@@ -61,10 +61,13 @@ public class TowerBehaviour : MonoBehaviour
     {
         canShootAfter = Time.time + shotCooldown - currentMods.shotCooldownReduction;
 
-        // TODO fix error here
         int totalTargets = attackTargets + currentMods.additionalTagets;
         for (int i = 0; i < totalTargets; i++)
         {
+            if (targets.Count <= i)
+            {
+                break;
+            }
             GameObject spawnedProjectile = Instantiate(projectile, transform.position, Quaternion.identity);
             BulletBehaviour bulletBehaviour = spawnedProjectile.GetComponent<BulletBehaviour>();
             bulletBehaviour.target = targets[i];
