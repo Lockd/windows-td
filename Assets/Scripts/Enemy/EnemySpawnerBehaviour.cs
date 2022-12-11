@@ -92,7 +92,7 @@ public class EnemySpawnerBehaviour : MonoBehaviour
         else
         {
             powerUpsManager.addNewTower(1);
-            powerUpsManager.offerPowerUp();
+            if (currentWave.shouldOfferPowerUp) powerUpsManager.offerPowerUp();
             isActive = true;
             canSpawnAfter = Time.time + currentWave.timeUntilNextWave;
             currentWaveIdx++;
