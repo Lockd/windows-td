@@ -184,10 +184,10 @@ MonoBehaviour:
   towerIndex: 4
   selectButton: {fileID: 10382461}
   windowBeh: {fileID: 1036236315}
-  descriptionText: 'Chrome has a chance to stun, dealing a huge damage:
+  descriptionText: 'Chrome has a chance to stun, dealing huge damage:
 
-    - 5
-    damage, 50% chance to stun enemy
+    - 5 damage,
+    50% chance to stun enemy
 
     - Medium range
 

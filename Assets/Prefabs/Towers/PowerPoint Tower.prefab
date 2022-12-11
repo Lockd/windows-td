@@ -137,7 +137,7 @@ MonoBehaviour:
   radius: 12
   shotCooldown: 0.5
   projectileSpeed: 12
-  damage: 3
+  damage: 1
   projectile: {fileID: 893959407976846140, guid: 16180a60d54093848af006ea03c63024, type: 3}
   bulletSize: 0.1
   enemySpeedReduction: 0
